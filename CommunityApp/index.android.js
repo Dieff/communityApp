@@ -3,121 +3,83 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-import Button from 'react-native-button';
-import React, { Component } from 'react';
+
+var React = require('react');
+
+import { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
-  TouchableHighlight,
-  LayoutAnimation
+  TouchableOpacity,
+  TextInput
 } from 'react-native';
 
-class SettingButton extends Component {
-  componentWillMount() {
-    LayoutAnimation.spring();
-  }
-  _onPressButton() {
-    LayoutAnimation.spring();
-  }
-  render() {
-    return (
-      <TouchableHighlight onPress={this._onPressButton}>
-        <View style={styles.calendarButton}>
-          <Text style={styles.calendarMenuWord}>Settings</Text>
-        </View>
-      </TouchableHighlight>    
-    );
-  }
-};
+var ExampleComponent = require('./src/Components/Example/Example.js');
 
-class MyButton extends Component {
-  componentWillMount() {
-    LayoutAnimation.spring();
-  }
-  _onPressButton() {
-    LayoutAnimation.spring();
-  }
-  render() {
+
+class NameLister extends Component {
+	constructor(props){
+		super(props);
+		this.state = {names: ['bob', 'jerry', 'tom', 'jane']};
+	}
+
+	newName(name){
+		var changingArray = this.state.names;
+		changingArray.push(name);
+		this.setState({names : changingArray});
+	}
+
+	render() {
+		var nameTabs = [];
+		for (var a=0;a<this.state.names.length;a++){
+			//console.log('name is ' + this.state.names[a])
+			nameTabs.push(<Text key={this.state.names[a]+Math.random()}> {this.state.names[a]} </Text>)
+		}
+		return(
+			<View>
+			{nameTabs}
+
+			<Text> Add a new name to me list? </Text>
+			<TextInput onSubmitEditing={function(event){
+				this.newName(event.nativeEvent.text)
+			}.bind(this)}/>
+			</View>
+		)
+	}
+
+}
+
+
+class CommunityApp extends Component {
+	  render() {
     return (
-      <TouchableHighlight onPress={this._onPressButton}>
-        <View style={styles.calendarButton}>
-          <Text style={styles.calendarMenuWord}>Calendar</Text>
-        </View>  
-      </TouchableHighlight>  
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          WE DID IT BOYS!!!!!!!!!!!!!!!
+          </Text>
+			<ExampleComponent/>
+			<NameLister/>
+      </View>
     );
   }
 }
 
-class CommunityApp extends Component {
-  render() {
-    return (
-      <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}} >
-        <Text style={styles.menuTitle}> The Old Town Community App </Text>
-      </View> 
-        <View style={styles.greenMenu} >
-          <MyButton />  
-          <View style={styles.buttonPlaceholder} />
-          <SettingButton />  
-        </View>  
-      </View>  
-    );
-  }
-};
-
-
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  menuTitle: {
+  welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-    color: 'black',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  greenMenu: {
-    flex: 11,
-    backgroundColor: 'green',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  calendarMenu: {
-    width: 150,
-    height: 50,
-    backgroundColor: 'white',  
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonPlaceholder: {
-    width: 150,
-    height: 50,
-    backgroundColor: 'green',
-  },
-  calendarMenuWord: {
-    fontSize: 20,
-    color: 'black',
-  },
-  calendarButton: {
-    width: 150,
-    height: 50,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 5,
-    borderRadius: 5,
-  },
-});
+  }
+};
+
+
 
 AppRegistry.registerComponent('CommunityApp', () => CommunityApp);
