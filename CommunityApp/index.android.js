@@ -3,6 +3,8 @@
  * copyright 2016 all rights reserved
  * @authors Nick Dieffenbacher-Krall, Cameron Sullivan, Keegan Feero
  */
+var React = require('react');
+
 
 import { Component } from 'react';
 import {
@@ -11,11 +13,9 @@ import {
   Text,
   View,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  ScrollView
 } from 'react-native';
-
-=======
-import { AppRegistry, View, ScrollView, Text } from 'react-native';
 
 var Day = require("./src/Components/Day/day.js");
 var Filter = require("./src/Components/Filter/filter.js");
