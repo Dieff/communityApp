@@ -17,9 +17,13 @@ import {
   ScrollView
 } from 'react-native';
 
+
 var Day = require("./src/Components/Day/day.js");
 var Filter = require("./src/Components/Filter/filter.js");
 var Label = require("./src/Components/Label/label.js")
+var ExampleComponent = require('./src/Components/Example/Example.js');
+var Menu = require('./src/Components/Menu/menu.js');
+
 
 class CommunityApp extends Component {
     render() {
@@ -35,9 +39,11 @@ class CommunityApp extends Component {
           <Filter/>
         </View>
     	</View>
+
     );
   }
 }
+
 
 
 AppRegistry.registerComponent('CommunityApp', () => CommunityApp);
