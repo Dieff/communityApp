@@ -29,6 +29,6 @@ class ExampleNumberButton extends Component {
 			</TouchableOpacity>
 		)
 	}
-}
+};
 
 module.exports = ExampleNumberButton;
