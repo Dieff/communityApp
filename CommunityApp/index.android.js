@@ -5,45 +5,23 @@
  */
 var React = require('react');
 
-
 import { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-  ScrollView
+  View
 } from 'react-native';
 
-
-var Day = require("./src/Components/Day/day.js");
-var Filter = require("./src/Components/Filter/filter.js");
-var Label = require("./src/Components/Label/label.js")
-var ExampleComponent = require('./src/Components/Example/Example.js');
-var Menu = require('./src/Components/Menu/menu.js');
-
+var God = require('./src/Components/God/God.js')
 
 class CommunityApp extends Component {
-    render() {
+  render() {
     return (
     	<View style = {{flex: 1}}>
-    	<ScrollView style = {{flex: 10, backgroundColor: "green"}}>
-    		<Day dayOfWeek = "Friday" dayNum = {1}/>
-    		<Day dayOfWeek = "Saturday" dayNum = {2}/>
-    		<Day dayOfWeek = "Sunday" dayNum = {3}/>
-
-    	</ScrollView>
-        <View style = {{alignItems: "center", position: "absolute", top: 530, left: 140}}>
-          <Filter/>
-        </View>
+        <God/>
     	</View>
-
     );
   }
 }
-
 
 
 AppRegistry.registerComponent('CommunityApp', () => CommunityApp);
