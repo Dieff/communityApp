@@ -16,10 +16,11 @@ import {
   TextInput
 } from 'react-native';
 
-var ExampleComponent = require('./src/Components/Example/Example.js');
+//var ExampleComponent = require('./src/Components/Example/Example.js');
+var Menu = require('./src/Components/Menu/menu.js');
 
 
-class NameLister extends Component {
+/*class NameLister extends Component {
 	constructor(props){
 		super(props);
 		this.state = {names: ['bob', 'jerry', 'tom', 'jane']};
@@ -34,7 +35,7 @@ class NameLister extends Component {
 	render() {
 		var nameTabs = [];
 		for (var a=0;a<this.state.names.length;a++){
-			//console.log('name is ' + this.state.names[a])
+			//console.log('name is ' + this.st1ate.names[a])
 			nameTabs.push(<Text key={this.state.names[a]+Math.random()}> {this.state.names[a]} </Text>)
 		}
 		return(
@@ -50,23 +51,17 @@ class NameLister extends Component {
 	}
 
 }
-
+*/
 
 class CommunityApp extends Component {
 	  render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          WE DID IT BOYS!!!!!!!!!!!!!!!
-          </Text>
-			<ExampleComponent/>
-			<NameLister/>
-      </View>
+      <Menu/>
     );
   }
 }
 
-const styles = {
+/*const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -80,6 +75,7 @@ const styles = {
   }
 };
 
-
+*/
 
 AppRegistry.registerComponent('CommunityApp', () => CommunityApp);
+console.log('keegan is a scrub');
