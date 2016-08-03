@@ -37,11 +37,13 @@ class OpeningMenu extends Component {
         <View style={{height: 20, flex: 1, backgroundColor: 'white'}} >
           <Text style={styles.menuTitle}> The Old Town Community App </Text>
         </View>
+
         <View style={styles.greenMenu} >
           <Button containerStyle={styles.menuButtonContainerStyle}
                 style={styles.menuButtonStyle} onPress={() => {this._navigate('Calendar', 'me')}}>
             Calendar
           </Button>
+          
         <View style={styles.buttonPlaceholder} />
           <Button containerStyle={styles.menuButtonContainerStyle}
               style={styles.menuButtonStyle}>

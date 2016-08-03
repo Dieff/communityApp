@@ -4,18 +4,30 @@
 
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import Button from 'react-native-button';
+
 var styles = require('./style.js');
+var Event = require("./../Event/Event.js");
 
 class Day extends Component {
 
   static defaultProps = {
     dayOfWeek: "No Day",
     dayNum: "0",
-    event: "No Events Today",
+    event: "No Event",
   }
 
   constructor(props) {
     super(props);
+  }
+
+  _navigate(destination, thisComponentsName) {
+    this.props.navigator.push({
+      name: destination,
+      passProps: {
+        name: thisComponentsName
+      }
+    });
   }
 
   render() {
@@ -46,17 +58,14 @@ class Day extends Component {
 
               <View style = {styles.cal_day_event}>
                 
-                <Text style = {styles.cal_day_event_text}>
-                  <Image source = {require("./bullet.jpg")} style = {styles.cal_day_bullet}/>
-                  <Text> </Text>
-                  {this.props.event}
-                </Text>
+                <Button onPress={() => {this._navigate('EventDetails', 'me')}}>
+                <Event event = {this.props.event}/>
+                </Button>
 
-                <Text style = {styles.cal_day_event_text}>
-                  <Image source = {require("./bullet.jpg")} style = {styles.cal_day_bullet}/>
-                  <Text> </Text>
-                  {this.props.event2}
-                </Text>
+                <Button onPress={() => {this._navigate('EventDetails', 'me')}}>
+                <Event event = {this.props.event2}/>
+                </Button>
+
 
               </View>
 
