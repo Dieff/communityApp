@@ -1,0 +1,22 @@
+<h> BEFORE YOU DO ANYTHING!!!!!!!!!!!!!!!!!!!!!!! </h>
+Commit your changes to your local branch
+
+from communityApp (NOT communityApp/CommunityApp)!!!!!!!!!!!!!
+git add *;
+git commit -m "my message";
+
+Pull the changes from the origin into your local branch
+Check if you have origin configured
+git remote -v; (you should see an upstream)
+
+git fetch upstream;
+git merge upstream/master;
+
+Resolve any conflicts. If you have to do this, commit again
+
+THEN
+git push origin/master
+
+
+THEN
+give me a pull request on github
