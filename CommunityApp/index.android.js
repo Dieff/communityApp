@@ -3,6 +3,7 @@
  * copyright 2016 all rights reserved
  * @authors Nick Dieffenbacher-Krall, Cameron Sullivan, Keegan Feero
  */
+'use strict';
 var React = require('react');
 
 import { Component } from 'react';
@@ -11,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-var God = require('./src/Components/God/god.js')
+var God = require('./src/Components/God/God.js')
 
 class CommunityApp extends Component {
   render() {

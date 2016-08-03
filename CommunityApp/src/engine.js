@@ -1,7 +1,6 @@
 //This doesn't work yet!!!!!!
-var Engine = {
+var AjaxEngine = {
         test: function(callback) {
-            console.log('test here');
             return fetch('http://facebook.github.io/react-native/movies.json')
                 .then((response) => response.json())
                 .then((responseJson) => {
@@ -14,4 +13,7 @@ var Engine = {
         }
 };
 
-module.exports = Engine;
+module.exports = AjaxEngine;
+
+
+//http://facebook.github.io/react-native/movies.json
