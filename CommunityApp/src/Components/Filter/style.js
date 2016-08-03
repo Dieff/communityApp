@@ -1,19 +1,30 @@
 var FilterStyle = {
-
-  cal_filter: {
+  calButtonContainerStyle: {
     backgroundColor: "black",
-    width: 75,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
     borderWidth: 3,
     borderRadius: 2,
   },
 
-  cal_filter_text: {
-    fontSize: 25,
-    color: "white",
+  calButtonTextStyle: {
+    fontSize: 20,
+    color: 'white',
+    padding: 5,
   },
+
+  calButtonContainerStyleHide: {
+    backgroundColor: "white",
+    borderWidth: 3,
+    borderRadius: 2,
+    borderColor: 'black',
+  },
+
+  calButtonTextStyleHide: {
+    fontSize: 20,
+    color: 'black',
+    padding: 5,
+  },
+
+
 
 };
 
