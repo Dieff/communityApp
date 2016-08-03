@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-var God = require('./src/Components/God/God.js')
+var God = require('./src/Components/God/god.js')
 
 class CommunityApp extends Component {
   render() {
