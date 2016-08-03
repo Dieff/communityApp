@@ -26,14 +26,17 @@ class CalendarView extends Component{
   render(){
     return(
       <View style = {{flex: 1}}>
+        
+        <Label navigator = {this.props.navigator}/>
 
         <View style = {{height: 55}}>
         <Label/>
         </View>
+        
     	  <ScrollView style = {{flex: 10, backgroundColor: "green"}}>
-    		  <Day dayOfWeek = "Friday" dayNum = {1} event = "7 pm: OTHS Football Game" event2 = "10 pm: Waterfront Fireworks"/>
-    		  <Day dayOfWeek = "Saturday" dayNum = {2} event = "10 am: Riverfest Parade" event2 = "12 am: OTHS Cross Country Meet"/>
-    		  <Day dayOfWeek = "Sunday" dayNum = {3} event = "3:30 pm: Outdoor Concert" event2 = "5:30 pm: Old Town Museum Open House"/>
+    		  <Day navigator = {this.props.navigator} dayOfWeek = "Friday" dayNum = {1} event = "7 pm: OTHS Football Game" event2 = "10 pm: Waterfront Fireworks"/>
+    		  <Day navigator = {this.props.navigator} dayOfWeek = "Saturday" dayNum = {2} event = "10 am: Riverfest Parade" event2 = "12 am: OTHS Cross Country Meet"/>
+    		  <Day navigator = {this.props.navigator} dayOfWeek = "Sunday" dayNum = {3} event = "3:30 pm: Outdoor Concert" event2 = "5:30 pm: Old Town Museum Open House"/>
     	  </ScrollView>
           <Filter xPos={Dimensions.get('window').height - 60} yPos={Dimensions.get('window').width/2 - 60}/>
       </View>
