@@ -3,11 +3,16 @@ var DayStyle = {
   cal_day: {
     width: 330,
     height: 300,
-    backgroundColor: "white",
     marginTop: 20,
     marginLeft: 15,
     borderRadius: 3,
     borderWidth: 5,
+    backgroundColor: "white",
+    flexDirection: "column",
+  },
+
+  cal_day_top: {
+    flex: 1.75,
     flexDirection: "row",
   },
 
@@ -41,16 +46,24 @@ var DayStyle = {
     color: "black",
   },
 
+    cal_day_bottom: {
+    flex: 5,
+  },
+
   cal_day_event: {
-    width: 100,
-    alignItems: "center",
-    height: 50,
-    backgroundColor: "blue",
+    backgroundColor: "white",
+    flex: 1,
   },
 
   cal_day_event_text: {
+    marginLeft: 20,
     color: "black",
     fontSize: 20,
+    justifyContent: "center",
+  },
+
+  cal_day_bullet: {
+    
   },
 
 };
