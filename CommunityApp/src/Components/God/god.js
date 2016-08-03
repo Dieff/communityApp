@@ -6,10 +6,12 @@ import {
 
 var OpeningMenu = require('./../OpeningMenu/OpeningMenu.js');
 var Calendar = require('./../CalendarView/CalendarView.js');
+var Engine = require('./../../Engine.js');
 
 class God extends Component {
   constructor(props){
     super(props);
+    Engine.test();
   }
   renderScene(route, navigator) {
     if(route.name == 'OpeningMenu') {

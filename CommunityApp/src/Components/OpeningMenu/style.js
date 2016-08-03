@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet
-} from 'react-native';
 
-var styles = StyleSheet.create({
+var styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -40,19 +37,18 @@ var styles = StyleSheet.create({
     height: 50,
     backgroundColor: 'green',
   },
-  calendarMenuWord: {
-    fontSize: 20,
-    color: 'black',
-  },
-  calendarButton: {
-    width: 150,
-    height: 50,
+  menuButtonContainerStyle: {
+    padding:10,
+    height:60,
+    overflow:'hidden',
+    borderRadius:9,
     backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 5,
-    borderRadius: 5,
+    width:160
   },
-});
+  menuButtonStyle: {
+    fontSize: 30,
+    color: 'green'}
+
+};
 
 module.exports = styles;

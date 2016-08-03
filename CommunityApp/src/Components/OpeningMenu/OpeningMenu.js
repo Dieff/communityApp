@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  LayoutAnimation
+  LayoutAnimation,
+  Dimensions
 } from 'react-native';
 import Button from 'react-native-button';
+
 
 var styles = require('./style.js');
 var CalendarButton = require('./../CalendarButton/cb.js');
@@ -20,7 +22,6 @@ class OpeningMenu extends Component {
   }
 
   _navigate(destination, thisComponentsName) {
-    console.log('_navigate here');
     this.props.navigator.push({
       name: destination,
       passProps: {
@@ -30,19 +31,20 @@ class OpeningMenu extends Component {
   }
 
   render() {
+    //console.log(Dimensions.get('window'))
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}} >
+        <View style={{height: 20, flex: 1, backgroundColor: 'white'}} >
           <Text style={styles.menuTitle}> The Old Town Community App </Text>
         </View>
         <View style={styles.greenMenu} >
-          <Button containerStyle={{padding:10, height:45, overflow:'hidden', borderRadius:4, backgroundColor: 'white'}}
-            style={{fontSize: 20, color: 'green'}} onPress={() => {this._navigate('Calendar', 'me')}}>
+          <Button containerStyle={styles.menuButtonContainerStyle}
+                style={styles.menuButtonStyle} onPress={() => {this._navigate('Calendar', 'me')}}>
             Calendar
           </Button>
         <View style={styles.buttonPlaceholder} />
-          <Button containerStyle={{padding:10, height:45, overflow:'hidden', borderRadius:4, backgroundColor: 'white'}}
-            style={{fontSize: 20, color: 'green'}}>
+          <Button containerStyle={styles.menuButtonContainerStyle}
+              style={styles.menuButtonStyle}>
             Settings
           </Button>
         </View>

@@ -3,6 +3,7 @@
  * copyright 2016 all rights reserved
  * @authors Nick Dieffenbacher-Krall, Cameron Sullivan, Keegan Feero
  */
+'use strict';
 var React = require('react');
 
 import { Component } from 'react';
