@@ -29,10 +29,6 @@ class CalendarView extends Component{
         
         <Label navigator = {this.props.navigator}/>
 
-        <View style = {{height: 55}}>
-        <Label/>
-        </View>
-        
     	  <ScrollView style = {{flex: 10, backgroundColor: "green"}}>
     		  <Day navigator = {this.props.navigator} dayOfWeek = "Friday" dayNum = {1} event = "7 pm: OTHS Football Game" event2 = "10 pm: Waterfront Fireworks"/>
     		  <Day navigator = {this.props.navigator} dayOfWeek = "Saturday" dayNum = {2} event = "10 am: Riverfest Parade" event2 = "12 am: OTHS Cross Country Meet"/>
