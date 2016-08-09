@@ -26,7 +26,7 @@ class CalendarView extends Component{
   render(){
     return(
       <View style = {{flex: 1}}>
-        
+
         <Label navigator = {this.props.navigator}/>
 
     	  <ScrollView style = {{flex: 10, backgroundColor: "green"}}>
