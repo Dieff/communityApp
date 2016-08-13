@@ -24,7 +24,7 @@ class CalendarView extends Component{
   }
 
   render(){
-    return(
+    return( 
       <View style = {{flex: 1}}>
 
         <Label navigator = {this.props.navigator}/>
@@ -40,9 +40,10 @@ class CalendarView extends Component{
           />
 
     		  <Day
-          navigator = {this.props.navigator}
-          dayOfWeek = "Saturday" dayNum = {2}
-          event = "10 am: Riverfest Parade"
+          navigator = {this.props.navigator} 
+          dayOfWeek = "Saturday"
+          dayNum = {2} 
+          event = "10 am: Riverfest Parade" 
           event2 = "12 am: OTHS Cross Country Meet"
           />
 

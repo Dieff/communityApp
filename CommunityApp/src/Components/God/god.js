@@ -8,6 +8,7 @@ var OpeningMenu = require('./../OpeningMenu/OpeningMenu.js');
 var Calendar = require('./../CalendarView/CalendarView.js');
 var EventDetails = require('./../EventDetails/EventDetails.js')
 var Engine = require('./../../Engine.js');
+var Day = require("./../Day/day.js");
 
 class God extends Component {
 
@@ -19,13 +20,13 @@ class God extends Component {
   renderScene(route, navigator) {
 
     if(route.name == 'OpeningMenu') {
-      return <OpeningMenu navigator={navigator} {...route.passProps}  />
+      return <OpeningMenu navigator = {navigator} {...route.passProps}  />
     }
     if(route.name == 'CalendarFromMenu' || route.name == 'CalendarFromDetails') {
-      return <Calendar navigator={navigator} {...route.passProps}  />
+      return <Calendar navigator = {navigator} {...route.passProps}  />
     }
     if(route.name == 'EventDetails') {
-      return <EventDetails navigator={navigator} {...route.passProps}  />
+      return <EventDetails navigator = {navigator} {...route.passProps} />
     }
 
   }

@@ -20,7 +20,6 @@ class EventAttribute extends Component {
     return (
 
       <Text style = {styles.attribute_text}>
-        {this.props.EventAttribute}
       </Text>
 
     );
