@@ -5,7 +5,9 @@
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import Button from 'react-native-button';
+
 var styles = require('./style.js');
+var EventAttribute = require("./../EventAttribute/EventAttribute.js");
 
 class EventDetails extends Component {
 
@@ -44,6 +46,19 @@ class EventDetails extends Component {
         </View>
 
         <View style = {styles.details_banner}>
+
+          <View style = {styles.details_banner_title}>
+            <Text style = {styles.details_banner_title_text}>
+              Important Event
+            </Text>
+          </View>
+
+          <View style = {styles.details_banner_info}>
+            <EventAttribute attribute = {this.props.attribute}/>
+            <EventAttribute attribute = {this.props.attribute2}/>
+            <EventAttribute attribute = {this.props.attribute3}/>
+          </View>
+
         </View>
 
       </View> 

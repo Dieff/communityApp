@@ -8,6 +8,7 @@ import Button from 'react-native-button';
 
 var styles = require('./style.js');
 var Event = require("./../Event/Event.js");
+var CalendarView = require("./../CalendarView/CalendarView.js");
 
 class Day extends Component {
 
