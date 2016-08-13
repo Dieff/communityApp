@@ -42,19 +42,6 @@ var EventDetailStyle = {
     flex: 10,
   },
 
-
-  details_banner: {
-    borderWidth: 5,
-    borderRadius: 5,
-    borderColor: "white",
-    backgroundColor: "white",
-    marginLeft: 20,
-    marginTop: 20,
-    height: 300,
-    width: 320,
-  }
-
-
 };
 
 module.exports = EventDetailStyle;
