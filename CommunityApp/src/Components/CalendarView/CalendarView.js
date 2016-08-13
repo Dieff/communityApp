@@ -13,7 +13,7 @@ import {
 var Day = require("./../Day/day.js");
 var Filter = require("./../Filter/filter.js");
 var Label = require("./../Label/label.js")
-
+var DropMenu = require("./../Test/test.js")
 
 class CalendarView extends Component{
   constructor(props) {
@@ -30,10 +30,32 @@ class CalendarView extends Component{
         <Label navigator = {this.props.navigator}/>
 
     	  <ScrollView style = {{flex: 10, backgroundColor: "green"}}>
-    		  <Day navigator = {this.props.navigator} dayOfWeek = "Friday" dayNum = {1} event = "7 pm: OTHS Football Game" event2 = "10 pm: Waterfront Fireworks"/>
-    		  <Day navigator = {this.props.navigator} dayOfWeek = "Saturday" dayNum = {2} event = "10 am: Riverfest Parade" event2 = "12 am: OTHS Cross Country Meet"/>
-    		  <Day navigator = {this.props.navigator} dayOfWeek = "Sunday" dayNum = {3} event = "3:30 pm: Outdoor Concert" event2 = "5:30 pm: Old Town Museum Open House"/>
+
+          <Day
+           navigator = {this.props.navigator}
+           dayOfWeek = "Friday"
+           dayNum = {1}
+           event = "7 pm: OTHS Football Game"
+           event2 = "10 pm: Waterfront Fireworks"
+          />
+
+    		  <Day
+          navigator = {this.props.navigator}
+          dayOfWeek = "Saturday" dayNum = {2}
+          event = "10 am: Riverfest Parade"
+          event2 = "12 am: OTHS Cross Country Meet"
+          />
+
+    		  <Day
+          navigator = {this.props.navigator}
+          dayOfWeek = "Sunday"
+          dayNum = {3}
+          event = "3:30 pm: Outdoor Concert"
+          event2 = "5:30 pm: Old Town Museum Open House"
+          />
+
     	  </ScrollView>
+          <DropMenu/>
           <Filter xPos={Dimensions.get('window').height - 60} yPos={Dimensions.get('window').width/2 - 60}/>
       </View>
     );
