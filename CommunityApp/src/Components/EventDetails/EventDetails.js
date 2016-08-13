@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 import React, { Component } from 'react';
@@ -54,14 +54,13 @@ class EventDetails extends Component {
           </View>
 
           <View style = {styles.details_banner_info}>
-            <EventAttribute attribute = {this.props.attribute}/>
-            <EventAttribute attribute = {this.props.attribute2}/>
-            <EventAttribute attribute = {this.props.attribute3}/>
+            <EventAttribute eventAttribute = {this.props.eventAttribute}/>
+            <EventAttribute eventAttribute = {this.props.eventAttribute2}/>
           </View>
 
         </View>
 
-      </View> 
+      </View>
     );
   }
 }

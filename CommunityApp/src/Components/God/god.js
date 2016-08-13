@@ -46,7 +46,7 @@ class God extends Component {
       return Navigator.SceneConfigs.FadeAndroid
     }
   }
-  
+
   render() {
     return (
       <Navigator

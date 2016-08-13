@@ -5,7 +5,7 @@ var EventDetailStyle = {
     flexDirection: "row",
     backgroundColor: "white",
     justifyContent: "flex-start",    // Horizontal in this case
-    alignItems: "center",  
+    alignItems: "center",
   },
 
   details_label_text: {
