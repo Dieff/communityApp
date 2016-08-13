@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 import React, { Component } from 'react';
@@ -60,7 +60,7 @@ class EventDetails extends Component {
 
         </View>
 
-      </View> 
+      </View>
     );
   }
 }

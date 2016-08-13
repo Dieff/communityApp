@@ -5,7 +5,7 @@ var EventDetailStyle = {
     flexDirection: "row",
     backgroundColor: "white",
     justifyContent: "flex-start",    // Horizontal in this case
-    alignItems: "center",  
+    alignItems: "center",
   },
 
   details_label_text: {
@@ -41,6 +41,19 @@ var EventDetailStyle = {
   details_banner_info: {
     flex: 10,
   },
+
+
+  details_banner: {
+    borderWidth: 5,
+    borderRadius: 5,
+    borderColor: "white",
+    backgroundColor: "white",
+    marginLeft: 20,
+    marginTop: 20,
+    height: 300,
+    width: 320,
+  }
+
 
 };
 

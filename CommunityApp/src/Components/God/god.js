@@ -19,13 +19,13 @@ class God extends Component {
   renderScene(route, navigator) {
 
     if(route.name == 'OpeningMenu') {
-      return <OpeningMenu navigator = {navigator} {...route.passProps}  />
+      return <OpeningMenu navigator={navigator} {...route.passProps}  />
     }
     if(route.name == 'CalendarFromMenu' || route.name == 'CalendarFromDetails') {
-      return <Calendar navigator = {navigator} {...route.passProps}  />
+      return <Calendar navigator={navigator} {...route.passProps}  />
     }
     if(route.name == 'EventDetails') {
-      return <EventDetails navigator = {navigator} {...route.passProps}  />
+      return <EventDetails navigator={navigator} {...route.passProps}  />
     }
 
   }
@@ -45,7 +45,7 @@ class God extends Component {
       return Navigator.SceneConfigs.FadeAndroid
     }
   }
-  
+
   render() {
     return (
       <Navigator
