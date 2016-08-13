@@ -9,7 +9,6 @@
     "moment": "^2.14.1",
     "react": "15.2.1",
     "react-native": "0.31.0",
-    "react-native-button": "^1.6.0",
-    "react-native-selectme": "^1.2.0"
+    "react-native-button": "^1.6.0"
   }
 }

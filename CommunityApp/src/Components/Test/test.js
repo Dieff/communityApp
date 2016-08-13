@@ -6,12 +6,9 @@ import {
   Image
 } from 'react-native';
 
-import DropDown, {
-  Select,
-  Option,
-  OptionList,
-} from 'react-native-selectme';
-
+var Select = require("./../KeeganSelectme/select.js")
+var Option = require("./../KeeganSelectme/option.js")
+var OptionList = require("./../KeeganSelectme/optionList.js")
 class DropMenu extends Component {
   constructor(props) {
     super(props);
