@@ -7,10 +7,6 @@ var EventStyle = {
     justifyContent: "center",
   },
 
-  cal_day_bullet: {
-    
-  },
-
 };
 
 module.exports = EventStyle;
