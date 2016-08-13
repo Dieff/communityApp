@@ -44,6 +44,7 @@ var DayStyle = {
   cal_day_ofWeek_text: {
     fontSize: 20,
     color: "black",
+    fontWeight: "bold",
   },
 
     cal_day_bottom: {

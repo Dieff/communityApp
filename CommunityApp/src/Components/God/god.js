@@ -17,25 +17,27 @@ class God extends Component {
   }
 
   renderScene(route, navigator) {
+
     if(route.name == 'OpeningMenu') {
-      return <OpeningMenu navigator={navigator} {...route.passProps}  />
+      return <OpeningMenu navigator = {navigator} {...route.passProps}  />
     }
-    if(route.name == 'Calendar') {
-      return <Calendar navigator={navigator} {...route.passProps}  />
+    if(route.name == 'CalendarFromMenu' || route.name == 'CalendarFromDetails') {
+      return <Calendar navigator = {navigator} {...route.passProps}  />
     }
     if(route.name == 'EventDetails') {
-      return <EventDetails navigator={navigator} {...route.passProps}  />
+      return <EventDetails navigator = {navigator} {...route.passProps}  />
     }
+
   }
 
   configureScene(route, routeStack){
     console.log(route, routeStack)
 
-    if (route.name == "Calendar") {
+    if (route.name == "CalendarFromMenu" || route.name == "EventDetails") {
       return Navigator.SceneConfigs.HorizontalSwipeJump;
     }
 
-    else if (route.name == "OpeningMenu") {
+    else if (route.name == "OpeningMenu" || route.name == "CalendarFromDetails") {
       return Navigator.SceneConfigs.HorizontalSwipeJumpFromRight
     }
 

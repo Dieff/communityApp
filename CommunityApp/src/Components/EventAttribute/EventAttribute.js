@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 var styles = require('./style.js');
 
-class Event extends Component {
+class EventAttribute extends Component {
 
   static defaultProps = {
   }
@@ -17,16 +17,14 @@ class Event extends Component {
 
   render() {
 
-    return (           
-                
-        <Text style = {styles.cal_day_event_text}>
-          <Image source = {require("./bullet.jpg")}/>
-          <Text> </Text>
-          {this.props.event}
-        </Text>
+    return (
+
+      <Text style = {styles.attribute_text}>
+        {this.props.EventAttribute}
+      </Text>
 
     );
   }
 }
 
-module.exports = Event;
+module.exports = EventAttribute;

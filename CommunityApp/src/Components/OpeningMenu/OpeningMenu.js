@@ -34,13 +34,13 @@ class OpeningMenu extends Component {
     //console.log(Dimensions.get('window'))
     return (
       <View style={{flex: 1}}>
-        <View style={{height: 20, flex: 1, backgroundColor: 'white'}} >
+        <View style={{flex: 1, backgroundColor: 'white'}} >
           <Text style={styles.menuTitle}> The Old Town Community App </Text>
         </View>
 
         <View style={styles.greenMenu} >
           <Button containerStyle={styles.menuButtonContainerStyle}
-                style={styles.menuButtonStyle} onPress={() => {this._navigate('Calendar', 'me')}}>
+                style={styles.menuButtonStyle} onPress={() => {this._navigate('CalendarFromMenu', 'me')}}>
             Calendar
           </Button>
           

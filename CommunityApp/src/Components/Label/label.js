@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 import React, { Component } from 'react';
@@ -32,15 +32,11 @@ class Label extends Component {
           <Button onPress={() => {this._navigate('OpeningMenu', 'me')}}>
             <Image source = {require("./menu.jpg")} style = {styles.cal_label_menuImage}/>
           </Button>
-
-          <Text style = {styles.cal_label_text}>
-            Old Town: July 2016
-          </Text>
-          <Image source = {require("./dropdown.jpg")} style = {{marginLeft: 5}}/>
           
+
         </View>
- 
-      </View> 
+
+      </View>
     );
   }
 }
