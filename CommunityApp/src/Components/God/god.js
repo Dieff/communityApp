@@ -18,7 +18,6 @@ class God extends Component {
   }
 
   renderScene(route, navigator) {
-
     if(route.name == 'OpeningMenu') {
       return <OpeningMenu navigator = {navigator} {...route.passProps}  />
     }
@@ -28,12 +27,9 @@ class God extends Component {
     if(route.name == 'EventDetails') {
       return <EventDetails navigator = {navigator} {...route.passProps} />
     }
-
   }
 
   configureScene(route, routeStack){
-    console.log(route, routeStack)
-
     if (route.name == "CalendarFromMenu" || route.name == "EventDetails") {
       return Navigator.SceneConfigs.HorizontalSwipeJump;
     }
